@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/small_brush"
+        android:icon="@drawable/ic_pencil"
+        android:title="@string/small_brush" />
+    <item
+        android:id="@+id/middle_brush"
+        android:icon="@drawable/ic_mid_brush"
+        android:title="@string/middle_brush" />
+    <item
+        android:id="@+id/big_brush"
+        android:icon="@drawable/ic_big_brush"
+        android:title="@string/big_brush" />
+    <item
+        android:id="@+id/eraser"
+        android:icon="@drawable/ic_eraser"
+        android:title="@string/eraser" />
+</menu>

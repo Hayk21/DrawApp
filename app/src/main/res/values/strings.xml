@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DrawApp</string>
+    <string name="small_brush">Small</string>
+    <string name="middle_brush">Middle</string>
+    <string name="big_brush">Big</string>
+    <string name="eraser">Eraser</string>
+    <string name="save_image">Save Image</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="success_saved">Image success saved in gallery</string>
+    <string name="failed_saved">Something goes wrong</string>
+</resources>

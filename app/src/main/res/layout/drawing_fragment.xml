@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".drawScreen.DrawingFragment">
+
+    <ImageView
+        android:id="@+id/backImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/backView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.myprojects.drawapp.customview.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/backView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/brush_menu" />
+
+    <View
+        android:id="@+id/backView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toTopOf="@id/bottomToolbar"
+        app:layout_constraintTop_toTopOf="@id/pickerSpace" />
+
+    <Space
+        android:id="@+id/pickerSpace"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toTopOf="@id/blackWhitePicker" />
+
+    <ImageView
+        android:id="@+id/blackWhiteProgress"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/blackWhitePicker"
+        app:layout_constraintTop_toTopOf="@id/blackWhitePicker" />
+
+    <SeekBar
+        android:id="@+id/blackWhitePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="15dp"
+        android:maxHeight="30dp"
+        android:minHeight="30dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progressDrawable="@drawable/progress_drawable"
+        android:thumb="@drawable/color_picker_thumb"
+        app:layout_constraintBottom_toTopOf="@id/colorPicker" />
+
+    <ImageView
+        android:id="@+id/colorProgressImage"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/colorPicker"
+        app:layout_constraintTop_toTopOf="@id/colorPicker" />
+
+    <SeekBar
+        android:id="@+id/colorPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="15dp"
+        android:maxHeight="30dp"
+        android:minHeight="30dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progressDrawable="@drawable/progress_drawable"
+        android:thumb="@drawable/color_picker_thumb"
+        app:layout_constraintBottom_toTopOf="@id/bottomToolbar" />
+
+    <ImageView
+        android:id="@+id/nextHistory"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/next_icon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/backView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/backHistory"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/back_icon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/backView"
+        app:layout_constraintEnd_toStartOf="@id/nextHistory" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
